@@ -3,8 +3,6 @@
 The widget is created for recruitment purposes to a specific company.
 
 ## Table of contents
-- [widget-with-redux-ts](#widget-with-redux-ts)
-  - [Table of contents](#table-of-contents)
   - [General info](#general-info)
   - [Deployment](#deployment)
   - [Screenshot](#screenshot)
@@ -44,8 +42,9 @@ An additional task is to save the state of the application in Redux and add Type
 I will probably deploy the app on GithubPages.
 
 ## Screenshot
-It should look like this:
+Widget at the end should look like this:
 
+![widget](https://user-images.githubusercontent.com/109333068/208254110-e6e21b0e-2f3e-47fa-b21c-589d7144b979.png)
 
 ## Technologies
 
