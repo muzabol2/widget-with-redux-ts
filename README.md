@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# widget-with-redux-ts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The widget is created for recruitment purposes to a specific company.
 
-## Available Scripts
+## Table of contents
+- [widget-with-redux-ts](#widget-with-redux-ts)
+  - [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Deployment](#deployment)
+  - [Screenshot](#screenshot)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Status](#status)
 
-In the project directory, you can run:
+## General info
+A widget to control a group of battery-powered lamps at the airport. The idea of ​​operation is that by pressing "+" and "–" we increase the intensity according to the set steps of 1%, 3%, 10%, 30%, 100%
 
-### `npm start`
+Time left shows the time left on the battery.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3 options:
+* Night vision
+* Dusk till dawn
+* Flashing
+set special lighting modes as the name suggests
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+5 bars next to the name of the THR 08 group show which lighting level is selected 1 bar illuminated - 1%, 2 bars 3%.... 5 bars 100%
 
-### `npm test`
+Of course, there are a lot of options and functionalities if something could not be set, or there was no confirmation, or we lost the connection, etc ... but we will not consider it now
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Part 1:
+"+", "-", NV, DtD, Flashing - send information to the backend.
+The square between "+" and "–" is set to the given %.
+The number of lighted bars comes as the preset value.
 
-### `npm run build`
+Part 2:
+If there is no confirmation for 5 seconds, the answer option lights up red.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Part 3:
+Writing a test for automatic validation, preferably in the TDD convention
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+An additional task is to save the state of the application in Redux and add Typescript.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
+I will probably deploy the app on GithubPages.
 
-### `npm run eject`
+## Screenshot
+It should look like this:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Main:
+* React
+* TypeScript, HTML, CSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Libraries:
+* Redux
+* Material-UI
 
-## Learn More
+## Setup
+Copy repository on your machine. To download all needed dependencies type in command line in the repo's location:
+```bash
+npm install
+```
+To run application on your local machine type: 
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Status
+Work in progress.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
