@@ -1,0 +1,18 @@
+.stepper {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   justify-items: end;
+   align-items: center;
+}
+
+.bar {
+   display: block;
+   background-color: var(--bars-color);
+   border-radius: 2px;
+   height: 7px;
+   width: 50px;
+}
+
+.bar--light {
+   background-color: white;
+}

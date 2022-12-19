@@ -1,15 +1,21 @@
-import { OptionLights } from "../../Widget";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLightType } from "../../../actions";
+import { WidgetState } from "../../../widgetReducer";
+import { LightState, OptionLights } from "../types";
 import "./ToggleSwitch.css";
 
 interface props {
    label: string, 
    name: OptionLights, 
-   optionLight: OptionLights,
-   setOptionLight: (option: OptionLights) => void
 }
 
-const ToggleSwitch = ({ label, name, optionLight, setOptionLight }: props) => {
-   const none: OptionLights = "none";
+const ToggleSwitch = ({ label, name }: props) => {
+   const dispatch = useDispatch();
+   const optionLight = useSelector<WidgetState, WidgetState["selectedLight"]>(state => state.selectedLight);
+   
+   const onChangeLightType = (light: string) => {
+      dispatch(changeLightType(light));
+   }
 
    return (
       <div className="toggle-container">
@@ -21,7 +27,7 @@ const ToggleSwitch = ({ label, name, optionLight, setOptionLight }: props) => {
                name={label}
                id={label}
                checked={name === optionLight}
-               onChange={(e) => setOptionLight(e.target.checked ? name : none)}
+               onChange={(e) => onChangeLightType(e.target.checked ? name : LightState.none)}
             />
             <label className="label" htmlFor={label}>
                <span className="inner" />
