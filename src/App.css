@@ -41,13 +41,3 @@
    gap: 10px;
    font-size: 13px;
 }
-
-.timeleft {
-   background-color: var(--timeleft-bg-color);
-   display: grid;
-   justify-content: flex-start;
-   align-items: center;
-   padding-left: 10px;
-   border-radius: 3px;
-   height: 50px;
-}

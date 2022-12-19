@@ -17,6 +17,7 @@ export const BatteryRegulator = () => {
    return (
       <div className="plusminus-container">
          <button
+            data-testid="plus-button"
             className="btn btn--blue"
             onClick={() => count < 4 && onChangeBatteryLevel(count + 1)}>
             <FaPlus />
@@ -25,6 +26,7 @@ export const BatteryRegulator = () => {
             {percentArr[count]}
          </div>
          <button
+            data-testid="minus-button"
             className="btn btn--gray"
             onClick={() => count > 0 && onChangeBatteryLevel(count - 1)}>
             <FaMinus />

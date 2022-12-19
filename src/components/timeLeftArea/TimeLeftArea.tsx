@@ -1,4 +1,5 @@
 import { FaBatteryEmpty } from "react-icons/fa";
+import "./TimeLeftArea.css";
 
 export const TimeLeftArea = () => {
    return (
