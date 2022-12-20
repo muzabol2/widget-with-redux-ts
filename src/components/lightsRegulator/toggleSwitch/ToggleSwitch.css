@@ -72,14 +72,3 @@
 .checkbox:checked+.label .switch {
    right: 0px;
 }
-
-.blink {
-   animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-   50% {
-      opacity: 0;
-      background-color: red;
-   }
-}

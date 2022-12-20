@@ -3,12 +3,14 @@ import { LightState } from "./components/lightsRegulator/types";
 
 export interface WidgetState {
    batteryLevel: number,
-   selectedLight: string
+   selectedLight: string,
+   connecting: boolean
 }
 
 const initialState = {
    batteryLevel: 0,
-   selectedLight: LightState.none
+   selectedLight: LightState.none,
+   connecting: false
 }
 
 export const widgetReducer = (
@@ -20,7 +22,10 @@ export const widgetReducer = (
          return { ...state, batteryLevel: action.payload };
       }
       case "CHANGE_LIGHT_TYPE": {
-         return {...state, selectedLight: action.payload};
+         return { ...state, selectedLight: action.payload };
+      }
+      case "CONNECT_WITH_BACKEND": {
+         return { ...state, connecting: action.payload }
       }
       default:
          return state;
