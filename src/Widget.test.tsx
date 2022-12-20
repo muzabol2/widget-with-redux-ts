@@ -13,7 +13,7 @@ describe('Widget Component', () => {
          wrapper = render(
             <Widget name={widgetTestName} />, {
             wrapper: ({ children }) => (
-               <Provider store={store()}>
+               <Provider store={store}>
                   {children}
                </Provider>
             )
