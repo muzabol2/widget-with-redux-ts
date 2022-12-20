@@ -11,9 +11,10 @@ export function useConnect() {
 
    useEffect(() => {
       if (refTimer.current !== null) {
-         setIsError(false);
          window.clearTimeout(refTimer.current);
          refTimer.current = null;
+         setIsError(false);
+         dispatch(connectWithBackend(false));
       }
       if (optionLight !== "none") {
          refTimer.current = window.setTimeout(() => {
